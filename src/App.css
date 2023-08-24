@@ -1,38 +1,103 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0%;
+  padding: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  flex: 30%;
+  background-color:deepskyblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .inputField {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header input {
+  width: 350px;
+  height: 40px;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  border: 2px solid #000;
+}
+
+.header button {
+  width: 75px;
+  height: 89px;
+  border: 2px solid #000;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.todolist{
+    flex: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+    background-color: cyan;
+}
+
+.task {
+  width: 600px;
+  height: 50px;
+  display: flex;
   color: white;
+  margin: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.task .content {
+  flex: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task .content span {
+  display: grid;
+  place-items: center;
+  border: 1.5px solid white;
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  border-right: none;
+  background-color:coral;
+  border: 1.5px solid black;
+}
+
+.task button {
+  flex: 20%;
+  height: 100%;
+  border: 1 px solid grey;
+  background-color: lightseagreen;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: 10px;
 }
